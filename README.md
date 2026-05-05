@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1f35,100:0e75b6&height=200&section=header&text=Eshwar%20G&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Data%20Analyst%20·%20Statistician%20·%20AI%2FML%20Engineer&descAlignY=60&descSize=18&descColor=a0c4ff&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1f35,100:0e75b6&height=200&section=header&text=Eshwar%20G&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Data%20Analyst%20·%20Statistician%20·%20AI%2FML%20Developer%20·%20Creative%20Technologist&descAlignY=60&descSize=18&descColor=a0c4ff&animation=fadeIn" width="100%"/>
 
 </div>
 
@@ -19,9 +19,9 @@
 
 I'm a data person who builds things.
 
-My brain naturally thinks in patterns, distributions, and edge cases. I got pulled into statistics because numbers tell stories that words can't, and I got pulled into AI because I wanted to make those stories interactive. Somewhere along the way I started wiring up hardware, training models, and deploying real-time systems from scratch.
+My brain naturally thinks in patterns, distributions, and edge cases. I was drawn to statistics because numbers tell stories that words can't, and I expanded into AI to make those stories interactive. Somewhere along the way, I started wiring up hardware, training models, and deploying real-time systems from scratch.
 
-I don't wait to understand something fully before I try it. I build first, break it, understand why, then build it better. That mindset has taken me from regression models on labour force datasets to real-time drowsiness detectors running efficiently on constrained hardware, to RAG pipelines that work completely offline.
+I don't wait to understand something fully before I try it. I build first, break it, understand why, and then build it better. That hands-on mindset has taken me from running models on labor force datasets to building targeted sentiment analysis programs, developing interactive robotics, researching LLM's, and teaching kids how to code and build AI/ML at Jrbotics.
 
 What I care about most is the gap between raw data and a decision someone can actually act on. Closing that gap, cleanly and efficiently, is what gets me to the desk every morning.
 
