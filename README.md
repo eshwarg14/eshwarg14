@@ -82,7 +82,7 @@ What I care about most is the gap between raw data and a decision someone can ac
 
 ---
 
-Profile Summary
+## Profile Summary
 
 <div align="center">
 
