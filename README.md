@@ -82,6 +82,24 @@ What I care about most is the gap between raw data and a decision someone can ac
 
 ---
 
+Profile Summary
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=eshwarg14&theme=nord_dark" width="90%" />
+
+</div>
+
+---
+
+## Contributions
+
+<div align="center">
+
+<img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" />
+
+</div>
+
 ## GitHub Activity
 
 <div align="center">
@@ -92,13 +110,6 @@ What I care about most is the gap between raw data and a decision someone can ac
 
 </div>
 
-## Contributions
-
-<div align="center">
-
-<img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" />
-
-</div>
 
 ---
 
