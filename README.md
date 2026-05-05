@@ -70,13 +70,13 @@ What I care about most is the gap between raw data and a decision someone can ac
 
 <div align="center">
 
-| &nbsp; | Project | What it does | Stack |
-|:---:|---|---|---|
-| 🎥 | [**Computer-Vision-Projects**](https://github.com/eshwarg14/Computer-Vision-Projects) | Real-time emotion recognition, drowsiness detection, gesture control, pose estimation | Python · OpenCV · MediaPipe |
-| 🧠 | [**AI-ML**](https://github.com/eshwarg14/AI-ML) | Health risk predictor, weather forecasting, fake news detector, crop disease detection | Python · scikit-learn · Pandas |
-| 🎮 | [**AI-Games**](https://github.com/eshwarg14/AI-Games) | Air canvas, gesture maze, rock-paper-scissors, AI drawing guesser | Python · OpenCV |
-| 💬 | [**Natural-Language-Processing**](https://github.com/eshwarg14/Natural-Language-Processing) | Spam detection, voice assistant, chatbot, news summariser | Python · NLP |
-| ✍️ | [**Braille-Writer-Arduino**](https://github.com/eshwarg14/Braille_writer_arduino) | Joystick-controlled Braille writer with MAX7219 LED matrix output | C++ · Arduino |
+| Project | What it does | Stack |
+|---|---|---|
+| [**Computer-Vision-Projects**](https://github.com/eshwarg14/Computer-Vision-Projects) | Real-time emotion recognition, drowsiness detection, gesture control, pose estimation | Python · OpenCV · MediaPipe |
+| [**AI-ML**](https://github.com/eshwarg14/AI-ML) | Health risk predictor, weather forecasting, fake news detector, crop disease detection | Python · scikit-learn · Pandas |
+| [**AI-Games**](https://github.com/eshwarg14/AI-Games) | Air canvas, gesture maze, rock-paper-scissors, AI drawing guesser | Python · OpenCV |
+| [**Natural-Language-Processing**](https://github.com/eshwarg14/Natural-Language-Processing) | Spam detection, voice assistant, chatbot, news summariser | Python · NLP |
+| [**Braille-Writer-Arduino**](https://github.com/eshwarg14/Braille_writer_arduino) | Joystick-controlled Braille writer with MAX7219 LED matrix output | C++ · Arduino |
 
 </div>
 
