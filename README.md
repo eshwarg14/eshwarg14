@@ -92,6 +92,14 @@ What I care about most is the gap between raw data and a decision someone can ac
 
 </div>
 
+## Contributions
+
+<div align="center">
+
+<img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" />
+
+</div>
+
 ---
 
 <div align="center">
