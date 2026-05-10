@@ -43,7 +43,6 @@ section{position:relative;z-index:1;padding:110px 0}
 .lbl::before{content:'//'}
 .lbl::after{content:'';flex:1;max-width:48px;height:1px;background:var(--green);opacity:.4}
 
-/* HERO NAME — no outline variant, full caps, no font that splits 'I' */
 h2.stitle{font-family:var(--sans);font-size:clamp(28px,4.5vw,48px);font-weight:700;letter-spacing:.04em;color:var(--white);line-height:1.1;margin-bottom:12px}
 h2.stitle span{color:var(--green)}
 .ssub{color:var(--dim);font-size:15px;max-width:500px;line-height:1.8;margin-bottom:56px}
@@ -56,9 +55,10 @@ h2.stitle span{color:var(--green)}
 .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 1.4s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
-/* Hero name — CDN update and font-weight changed to 400 */
+/* Hero name — Normal weight Copperplate */
 .hero-name{
-  font-family:'Copperplate Gothic Std','Copperplate Bold','Copperplate Gothic Bold','Copperplate',var(--sans);font-weight:400;
+  font-family:'Copperplate Gothic Std','Copperplate',var(--sans);
+  font-weight:400;
   font-size:clamp(60px,10vw,118px);
   line-height:.92;letter-spacing:.04em;color:var(--white);
   animation:fadein .9s var(--ease) .25s both;
@@ -236,7 +236,9 @@ footer span{color:var(--green)}
   <div class="hero-in">
     <div class="hero-badge"><span class="badge-dot"></span>available_for_hire.status = true</div>
     <div class="code-comment" style="margin-bottom:6px">// init developer profile</div>
-    <h1 class="hero-name">ESHWAR <span class="dim-stroke">G.</span></h1>
+    
+    <h1 class="hero-name">Eshwar <span class="dim-stroke">G.</span></h1>
+    
     <div class="hero-role-wrap">
       <span class="hero-prompt"><span>&gt;</span>&nbsp;role =</span>
       <span id="typed-out"></span>
