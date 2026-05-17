@@ -73,6 +73,7 @@ What I care about most is the gap between raw data and a decision someone can ac
 
 | Project | What it does | Stack |
 |---|---|---|
+| [**BigData-Analytics-Portfolio**](https://github.com/eshwarg14/BigData-Analytics-Portfolio) | A comprehensive collection of big data processing and analytics projects. | Hadoop · Kafka · Pig Latin · Python |
 | [**Computer-Vision-Projects**](https://github.com/eshwarg14/Computer-Vision-Projects) | Real-time emotion recognition, drowsiness detection, gesture control, pose estimation | Python · OpenCV · MediaPipe |
 | [**AI-ML**](https://github.com/eshwarg14/AI-ML) | Health risk predictor, weather forecasting, fake news detector, crop disease detection | Python · scikit-learn · Pandas |
 | [**AI-Games**](https://github.com/eshwarg14/AI-Games) | Air canvas, gesture maze, rock-paper-scissors, AI drawing guesser | Python · OpenCV |
