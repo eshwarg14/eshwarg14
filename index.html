@@ -72,6 +72,15 @@ body {
   font-size: 15px; line-height: 1.7; overflow-x: hidden; cursor: none;
   transition: background 0.6s var(--ease), color 0.6s var(--ease);
 }
+@media (hover: none) and (pointer: coarse) {
+  /* Touch devices: restore normal cursor, hide custom cursor elements */
+  body { cursor: auto; }
+  #cur, #cur-r { display: none !important; }
+  a, button, .magnetic, .stag, .pcard, .acard { cursor: pointer; }
+  .acard:hover { transform: none; } /* disable desktop hover 3D on touch */
+  .pcard:hover { transform: none; box-shadow: var(--glass-glow); }
+  .titem:hover { transform: none; }
+}
 ::selection { background: var(--green); color: var(--bg); }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -323,20 +332,198 @@ footer span { color: var(--green); }
 /* Code Comment Global */
 .code-comment { font-family: var(--mono); font-size: 12px; color: var(--text-muted); margin-bottom: 10px; font-style: italic; opacity: 0.8; }
 
-/* Responsive */
-@media(max-width: 1024px) {
-  .hero-terminal { display: none; }
-  .about-grid, .skills-layout { grid-template-columns: 1fr; gap: 60px; }
+/* =========================================
+   RESPONSIVE — LAPTOP / LARGE TABLET (≤1200px)
+   ========================================= */
+@media (max-width: 1200px) {
+  .wrap { padding: 0 32px; }
+  .hero-in { padding: 0 32px; }
+  .hero-terminal { width: 340px; right: 3%; }
+  h2.stitle { font-size: clamp(28px, 4.5vw, 52px); }
 }
-@media(max-width: 768px) {
-  .hero-name { font-size: clamp(40px, 8vw, 80px); white-space: normal; }
-  .pgrid { grid-template-columns: 1fr; }
-  .pcard.feat { grid-column: span 1; }
+
+/* =========================================
+   RESPONSIVE — TABLET LANDSCAPE / SMALL LAPTOP (≤1024px)
+   ========================================= */
+@media (max-width: 1024px) {
+  .hero-terminal { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .skills-layout { grid-template-columns: 1fr; gap: 48px; }
+  .pgrid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .pcard.feat { grid-column: span 2; }
+  .stat-row { grid-template-columns: repeat(4, 1fr); }
+  section { padding: 120px 0; }
+  .wrap { padding: 0 32px; }
+  .hero-in { padding: 0 32px; }
+  #cur, #cur-r { display: none; }
+  body { cursor: auto; }
+  nav a { cursor: pointer; }
+  .btn-p, .btn-s, .clink, .acard, .stag, .pcard, #theme-toggle { cursor: pointer; }
+}
+
+/* =========================================
+   RESPONSIVE — TABLET PORTRAIT (≤768px)
+   ========================================= */
+@media (max-width: 768px) {
+  /* Typography */
+  .hero-name { font-size: clamp(36px, 9vw, 72px); white-space: normal; line-height: 1; }
+  h2.stitle { font-size: clamp(26px, 6vw, 44px); }
+  .hero-desc { font-size: 15px; }
+  .ssub { font-size: 15px; }
+
+  /* Layout */
   section { padding: 100px 0; }
-  nav { width: 90%; justify-content: center; flex-wrap: wrap; }
-  nav a { padding: 8px 12px; font-size: 11px; }
-  .timeline { padding-left: 20px; }
-  .tdot { left: -21px; }
+  .wrap { padding: 0 24px; }
+  .hero-in { padding: 0 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .skills-layout { grid-template-columns: 1fr; gap: 40px; }
+  .pgrid { grid-template-columns: 1fr; gap: 20px; }
+  .pcard.feat { grid-column: span 1; }
+
+  /* Navigation */
+  nav {
+    width: calc(100% - 32px);
+    top: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  nav a { padding: 7px 10px; font-size: 11px; letter-spacing: 0.05em; }
+  .nav-sep { display: none; }
+
+  /* Hero */
+  .hero-badge { font-size: 11px; padding: 5px 12px; }
+  .hero-role-wrap { padding: 10px 18px; margin: 24px 0 28px; }
+  .hero-prompt { font-size: 13px; }
+  #typed-out { font-size: 13px; }
+  .hero-btns { flex-direction: column; gap: 12px; }
+  .btn-p, .btn-s { width: 100%; justify-content: center; padding: 13px 24px; }
+  .hero-scroll { bottom: 24px; }
+
+  /* About cards */
+  .about-cards { gap: 14px; }
+  .acard { padding: 22px; }
+  .acard-t { font-size: 16px; }
+
+  /* Skills */
+  .skills-bars-col { gap: 32px; }
+  .skill-section-title { font-size: 15px; }
+  .stat-row { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .stat-num { font-size: 26px; }
+  .nn-wrap { height: 180px; }
+  .chart-wrap { height: 160px; }
+  .radar-wrap { height: 190px; }
+
+  /* Projects */
+  .pcard { padding: 28px; }
+  .ptitle { font-size: 20px; }
+  .pdesc { font-size: 14px; }
+
+  /* Experience */
+  .timeline { padding-left: 28px; margin-top: 28px; }
+  .tdot { left: -29px; top: 28px; width: 14px; height: 14px; }
+  .titem { padding: 24px; margin-bottom: 48px; }
+  .trole { font-size: 20px; }
+  .tpts li { font-size: 14px; }
+
+  /* Contact */
+  .contact-c { padding: 40px 28px; }
+  .clinks { flex-direction: column; align-items: center; gap: 14px; }
+  .clink { width: 100%; max-width: 360px; justify-content: center; font-size: 12px; padding: 14px 24px; }
+
+  /* Theme toggle */
+  #theme-toggle { bottom: 20px; right: 16px; width: 42px; height: 42px; }
+
+  /* Orbs: reduce for performance */
+  .o1 { width: 400px; height: 400px; }
+  .o2 { width: 300px; height: 300px; }
+  .o3 { display: none; }
+}
+
+/* =========================================
+   RESPONSIVE — PHONE (≤480px)
+   ========================================= */
+@media (max-width: 480px) {
+  /* Typography */
+  .hero-name { font-size: clamp(30px, 11vw, 56px); }
+  h2.stitle { font-size: clamp(24px, 7.5vw, 38px); }
+  .lbl { font-size: 10px; letter-spacing: 0.18em; }
+
+  /* Layout */
+  section { padding: 88px 0; }
+  .wrap { padding: 0 18px; }
+  .hero-in { padding: 0 18px; }
+
+  /* Navigation: icon-sized compact bar */
+  nav {
+    width: calc(100% - 24px);
+    top: 10px;
+    padding: 4px;
+    border-radius: 9px;
+    gap: 1px;
+  }
+  nav a { padding: 6px 7px; font-size: 10px; letter-spacing: 0.03em; border-radius: 6px; }
+
+  /* Hero */
+  .hero-badge { font-size: 10px; padding: 4px 10px; }
+  #hero { min-height: 100svh; }
+  .hero-role-wrap { padding: 8px 14px; margin: 20px 0 22px; flex-wrap: wrap; gap: 8px; }
+  .hero-prompt { font-size: 12px; }
+  #typed-out { font-size: 12px; }
+  .hero-desc { font-size: 14px; line-height: 1.8; margin-bottom: 36px; }
+  .btn-p, .btn-s { font-size: 12px; padding: 12px 20px; }
+  .hero-scroll { display: none; }
+
+  /* About */
+  .about-text p { font-size: 14px; }
+  .acard { padding: 18px; }
+  .acard-t { font-size: 15px; }
+  .acard-d { font-size: 13px; }
+
+  /* Skills */
+  .sname { font-size: 13px; }
+  .skill-section-title { font-size: 14px; }
+  .skill-section-sub { font-size: 10px; }
+  .stat-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat-box { padding: 12px; }
+  .stat-num { font-size: 22px; }
+  .stat-lbl { font-size: 9px; }
+  .nn-wrap { height: 160px; }
+  .viz-card { padding: 18px; }
+
+  /* Projects */
+  .pcard { padding: 22px; border-radius: 12px; }
+  .pnum { font-size: 11px; margin-bottom: 14px; }
+  .ptitle { font-size: 18px; margin-bottom: 12px; }
+  .pdesc { font-size: 13px; margin-bottom: 20px; }
+  .pstack { gap: 8px; margin-bottom: 20px; }
+  .ptag { font-size: 10px; padding: 3px 8px; }
+  .plink { font-size: 11px; padding: 7px 13px; }
+
+  /* Experience */
+  .timeline { padding-left: 22px; }
+  .timeline::before { left: 4px; }
+  .tdot { left: -23px; width: 12px; height: 12px; top: 26px; }
+  .titem { padding: 18px; margin-bottom: 36px; border-radius: 12px; }
+  .trole { font-size: 17px; }
+  .tco { font-size: 13px; margin-bottom: 16px; }
+  .tdate { font-size: 11px; }
+  .tpts li { font-size: 13px; padding-left: 18px; line-height: 1.7; }
+
+  /* Contact */
+  .contact-c { padding: 32px 18px; border-radius: 16px; }
+  .ssub { font-size: 14px; }
+  .clink { font-size: 11px; padding: 13px 18px; }
+
+  /* Footer */
+  footer { font-size: 11px; padding: 28px 20px; }
+
+  /* Orbs: minimal on small screens */
+  .o1 { width: 250px; height: 250px; opacity: 0.1; }
+  .o2 { width: 200px; height: 200px; opacity: 0.1; }
+  .scanlines { opacity: 0.2; }
 }
 </style>
 </head>
@@ -650,49 +837,58 @@ themeBtn.addEventListener('click', () => {
   if(window.updateCharts) window.updateCharts(); // update charts if defined
 });
 
-// Cursor Physics
+// Touch device detection
+const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+// Cursor Physics — desktop only
 const cur = document.getElementById('cur'), ring = document.getElementById('cur-r');
-let mx = window.innerWidth/2, my = window.innerHeight/2, rx = mx, ry = my;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-(function tick() {
-  cur.style.transform = `translate3d(${mx}px, ${my}px, 0) translate(-50%, -50%)`;
-  rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
-  ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
-  requestAnimationFrame(tick);
-})();
+if (!isTouch) {
+  let mx = window.innerWidth/2, my = window.innerHeight/2, rx = mx, ry = my;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  (function tick() {
+    cur.style.transform = `translate3d(${mx}px, ${my}px, 0) translate(-50%, -50%)`;
+    rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
+    ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
+    requestAnimationFrame(tick);
+  })();
+}
 
-// Magnetic Elements
-document.querySelectorAll('.magnetic').forEach(el => {
-  el.addEventListener('mousemove', function(e) {
-    const rect = this.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    this.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.05)`;
+// Magnetic Elements — desktop only
+if (!isTouch) {
+  document.querySelectorAll('.magnetic').forEach(el => {
+    el.addEventListener('mousemove', function(e) {
+      const rect = this.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      this.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.05)`;
+    });
+    el.addEventListener('mouseleave', function() {
+      this.style.transform = '';
+    });
   });
-  el.addEventListener('mouseleave', function() {
-    this.style.transform = '';
-  });
-});
+}
 
-// Card Hover Tracker
+// Card Hover Tracker — 3D tilt desktop only
 document.querySelectorAll('.pcard').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.setProperty('--mouse-x', `${x}px`);
-    card.style.setProperty('--mouse-y', `${y}px`);
-    
-    // 3D tilt
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * -5;
-    const rotateY = ((x - centerX) / centerX) * 5;
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-  });
+  if (!isTouch) {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+      
+      // 3D tilt
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
+  }
   
   const url = card.dataset.href;
   if(url) {
@@ -709,14 +905,16 @@ let W, H;
 function resize() { W = cv.width = window.innerWidth; H = cv.height = window.innerHeight; }
 resize(); window.addEventListener('resize', resize);
 
-const pts = Array.from({length: 80}, () => ({
+const particleCount = isTouch ? 30 : 80;
+const pts = Array.from({length: particleCount}, () => ({
   x: Math.random() * 1920, y: Math.random() * 1080,
   vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
   r: Math.random() * 1.5 + 0.5, a: Math.random() * 0.5 + 0.1
 }));
 
+const dropCount = isTouch ? 30 : 80;
 const codeChars = '01{}[]()<>=+-*/&|!?_abcdefpython;:#';
-const drops = Array.from({length: 80}, () => Math.random() * -100);
+const drops = Array.from({length: dropCount}, () => Math.random() * -100);
 
 function getThemeColors() {
   const isLight = root.getAttribute('data-theme') === 'light';
