@@ -223,6 +223,17 @@ h2.stitle span::after { content: ''; position: absolute; bottom: 8px; left: 0; w
 .stag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.05em; color: var(--text-dim); background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; transition: all 0.3s var(--ease); cursor: none; backdrop-filter: blur(5px); }
 .stag:hover { background: rgba(0,255,157,0.1); color: var(--green); border-color: var(--green); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,255,157,0.2); }
 
+/* Skill section headers */
+.skill-section { display: flex; flex-direction: column; }
+.skill-section-hd { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.skill-section-num { font-family: var(--mono); font-size: 11px; color: var(--cyan); background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.2); border-radius: 6px; padding: 4px 8px; letter-spacing: 0.12em; flex-shrink: 0; margin-top: 3px; }
+.skill-section-title { font-family: var(--sans); font-size: 17px; font-weight: 600; color: var(--text-main); letter-spacing: 0.01em; margin-bottom: 4px; }
+.skill-section-sub { font-family: var(--mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.04em; }
+
+
+.nn-wrap { position: relative; height: 220px; width: 100%; overflow: hidden; }
+.nn-wrap canvas { width: 100%; height: 100%; }
+
 .viz-col { display: flex; flex-direction: column; gap: 24px; }
 .viz-card { background: var(--bg2); backdrop-filter: var(--glass-blur) saturate(150%); border: 1px solid var(--border); border-radius: 12px; padding: 24px; position: relative; box-shadow: var(--glass-glow); transition: all 0.4s var(--ease); overflow: hidden; }
 .viz-card:hover { border-color: var(--border-strong); transform: translateY(-2px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
@@ -418,26 +429,44 @@ footer span { color: var(--green); }
     <div class="skills-layout rv d1">
 
       <div class="skills-bars-col">
-        <div>
-          <div class="sgroup-title">// data &amp; analytics</div>
-          <div class="sitem"><div class="srow"><span class="sname">Python</span><span class="spct">90%</span></div><div class="sbar"><div class="sfill" data-w="90"></div></div></div>
-          <div class="sitem"><div class="srow"><span class="sname">Pandas / NumPy</span><span class="spct">88%</span></div><div class="sbar"><div class="sfill" data-w="88"></div></div></div>
-          <div class="sitem"><div class="srow"><span class="sname">R Statistical Modelling</span><span class="spct">75%</span></div><div class="sbar"><div class="sfill" data-w="75"></div></div></div>
-          <div class="sitem"><div class="srow"><span class="sname">SQL</span><span class="spct">70%</span></div><div class="sbar"><div class="sfill" data-w="70"></div></div></div>
+        <div class="skill-section">
+          <div class="skill-section-hd">
+            <span class="skill-section-num">01</span>
+            <div>
+              <div class="skill-section-title">Data &amp; Analytics</div>
+              <div class="skill-section-sub">Languages, statistical tools &amp; data pipelines</div>
+            </div>
+          </div>
+          <div class="sitem"><div class="srow"><span class="sname">Python</span></div><div class="sbar"><div class="sfill" data-w="90"></div></div></div>
+          <div class="sitem"><div class="srow"><span class="sname">Pandas / NumPy</span></div><div class="sbar"><div class="sfill" data-w="88"></div></div></div>
+          <div class="sitem"><div class="srow"><span class="sname">R Statistical Modelling</span></div><div class="sbar"><div class="sfill" data-w="75"></div></div></div>
+          <div class="sitem"><div class="srow"><span class="sname">SQL</span></div><div class="sbar"><div class="sfill" data-w="70"></div></div></div>
         </div>
-        <div>
-          <div class="sgroup-title">// AI / ML / CV</div>
-          <div class="sitem"><div class="srow"><span class="sname">OpenCV</span><span class="spct">85%</span></div><div class="sbar"><div class="sfill" data-w="85"></div></div></div>
-          <div class="sitem"><div class="srow"><span class="sname">scikit-learn</span><span class="spct">82%</span></div><div class="sbar"><div class="sfill" data-w="82"></div></div></div>
-          <div class="sitem"><div class="srow"><span class="sname">MediaPipe</span><span class="spct">80%</span></div><div class="sbar"><div class="sfill" data-w="80"></div></div></div>
-          <div class="sitem"><div class="srow"><span class="sname">Streamlit</span><span class="spct">76%</span></div><div class="sbar"><div class="sfill" data-w="76"></div></div></div>
+        <div class="skill-section">
+          <div class="skill-section-hd">
+            <span class="skill-section-num">02</span>
+            <div>
+              <div class="skill-section-title">AI / ML / Computer Vision</div>
+              <div class="skill-section-sub">Models, frameworks &amp; real-time vision systems</div>
+            </div>
+          </div>
+          <div class="sitem"><div class="srow"><span class="sname">OpenCV</span></div><div class="sbar"><div class="sfill" data-w="85"></div></div></div>
+          <div class="sitem"><div class="srow"><span class="sname">scikit-learn</span></div><div class="sbar"><div class="sfill" data-w="82"></div></div></div>
+          <div class="sitem"><div class="srow"><span class="sname">MediaPipe</span></div><div class="sbar"><div class="sfill" data-w="80"></div></div></div>
+          <div class="sitem"><div class="srow"><span class="sname">Streamlit</span></div><div class="sbar"><div class="sfill" data-w="76"></div></div></div>
           <div class="stags"><span class="stag magnetic">LLMs</span><span class="stag magnetic">Qwen</span><span class="stag magnetic">EAR Logic</span><span class="stag magnetic">Offline AI</span></div>
         </div>
-        <div>
-          <div class="sgroup-title">// big data &amp; hardware</div>
-          <div class="sitem"><div class="srow"><span class="sname">Arduino / ESP32</span><span class="spct">80%</span></div><div class="sbar"><div class="sfill" data-w="80"></div></div></div>
-          <div class="sitem"><div class="srow"><span class="sname">Hadoop / MapReduce</span><span class="spct">70%</span></div><div class="sbar"><div class="sfill" data-w="70"></div></div></div>
-          <div class="sitem"><div class="srow"><span class="sname">Apache Kafka</span><span class="spct">65%</span></div><div class="sbar"><div class="sfill" data-w="65"></div></div></div>
+        <div class="skill-section">
+          <div class="skill-section-hd">
+            <span class="skill-section-num">03</span>
+            <div>
+              <div class="skill-section-title">Big Data &amp; Hardware</div>
+              <div class="skill-section-sub">Distributed systems, IoT &amp; embedded platforms</div>
+            </div>
+          </div>
+          <div class="sitem"><div class="srow"><span class="sname">Arduino / ESP32</span></div><div class="sbar"><div class="sfill" data-w="80"></div></div></div>
+          <div class="sitem"><div class="srow"><span class="sname">Hadoop / MapReduce</span></div><div class="sbar"><div class="sfill" data-w="70"></div></div></div>
+          <div class="sitem"><div class="srow"><span class="sname">Apache Kafka</span></div><div class="sbar"><div class="sfill" data-w="65"></div></div></div>
           <div class="stags"><span class="stag magnetic">Pig Latin</span><span class="stag magnetic">KRaft</span><span class="stag magnetic">RFID</span><span class="stag magnetic">Linux</span></div>
         </div>
       </div>
@@ -451,8 +480,8 @@ footer span { color: var(--green); }
         </div>
 
         <div class="viz-card">
-          <div class="viz-title">// skill domain radar</div>
-          <div class="radar-wrap"><canvas id="radarChart"></canvas></div>
+          <div class="viz-title">// neural network architecture</div>
+          <div class="nn-wrap" id="nnViz"></div>
         </div>
 
         <div class="viz-card">
@@ -796,69 +825,40 @@ function addLine() {
 addLine();
 
 // Charts
-let radarChart, stackChart;
+let stackChart;
 window.addEventListener('load', () => {
   const isLight = () => root.getAttribute('data-theme') === 'light';
   
   const getGridColor = () => isLight() ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)';
   const getTickColor = () => isLight() ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)';
   const getGreen = () => isLight() ? '#059669' : '#00ff9d';
-  const getGreenBg = () => isLight() ? 'rgba(5, 150, 105, 0.15)' : 'rgba(0, 255, 157, 0.15)';
 
   Chart.defaults.font.family = "'JetBrains Mono', monospace";
   Chart.defaults.color = getTickColor();
 
-  const radarCtx = document.getElementById('radarChart').getContext('2d');
-  radarChart = new Chart(radarCtx, {
-    type: 'radar',
-    data: {
-      labels: ['Data','ML','CV','NLP','Big Data','IoT','Stats'],
-      datasets: [{
-        data: [90,82,85,75,68,80,75],
-        backgroundColor: getGreenBg(),
-        borderColor: getGreen(),
-        pointBackgroundColor: getGreen(),
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: getGreen(),
-        borderWidth: 2, pointRadius: 3, pointHoverRadius: 6
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { backgroundColor: 'rgba(0,0,0,0.8)', titleFont: {size: 11}, bodyFont: {size: 11} } },
-      scales: {
-        r: {
-          angleLines: { color: getGridColor() }, grid: { color: getGridColor() },
-          pointLabels: { color: getTickColor(), font: {size: 10} },
-          ticks: { display: false }, min: 0, max: 100
-        }
-      }
-    }
-  });
-
+  // Tech Stack Usage — based on GitHub projects
   const stackCtx = document.getElementById('stackChart').getContext('2d');
   stackChart = new Chart(stackCtx, {
     type: 'bar',
     data: {
-      labels: ['Py','CV','MP','SKL','Ard','Stm','Hdp'],
+      labels: ['Python','OpenCV','MediaPipe','scikit-learn','Hadoop','Arduino','NLP'],
       datasets: [{
-        data: [6,4,3,3,2,3,1],
+        data: [6, 4, 3, 3, 2, 2, 2],
         backgroundColor: [
-          'rgba(0, 255, 157, 0.8)', 'rgba(0, 229, 255, 0.8)', 'rgba(124, 77, 255, 0.8)',
-          'rgba(0, 201, 122, 0.8)', 'rgba(255, 171, 64, 0.8)', 'rgba(41, 121, 255, 0.8)',
-          'rgba(255, 83, 112, 0.8)'
+          'rgba(0, 255, 157, 0.85)', 'rgba(0, 229, 255, 0.85)', 'rgba(124, 77, 255, 0.85)',
+          'rgba(0, 201, 122, 0.85)', 'rgba(255, 171, 64, 0.85)', 'rgba(41, 121, 255, 0.85)',
+          'rgba(255, 83, 112, 0.85)'
         ],
-        borderRadius: 4, borderWidth: 0,
+        borderRadius: 6, borderWidth: 0,
         hoverBackgroundColor: getGreen()
       }]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { backgroundColor: 'rgba(0,0,0,0.8)', bodyFont: {size: 11} } },
+      plugins: { legend: { display: false }, tooltip: { backgroundColor: 'rgba(0,0,0,0.85)', bodyFont: {size: 11}, callbacks: { label: ctx => ` ${ctx.raw} project${ctx.raw>1?'s':''}`  } } },
       scales: {
-        x: { grid: { display: false }, ticks: { color: getTickColor() } },
-        y: { grid: { color: getGridColor() }, ticks: { color: getTickColor(), stepSize: 1 }, border: {display: false} }
+        x: { grid: { display: false }, ticks: { color: getTickColor(), font: {size: 10} } },
+        y: { grid: { color: getGridColor() }, ticks: { color: getTickColor(), stepSize: 1 }, border: {display: false}, title: { display: true, text: 'projects', color: getTickColor(), font: {size: 9, family: "'JetBrains Mono', monospace"} } }
       }
     }
   });
@@ -867,21 +867,259 @@ window.addEventListener('load', () => {
   window.updateCharts = () => {
     const gridC = getGridColor();
     const tickC = getTickColor();
-    
-    radarChart.data.datasets[0].borderColor = getGreen();
-    radarChart.data.datasets[0].backgroundColor = getGreenBg();
-    radarChart.data.datasets[0].pointBackgroundColor = getGreen();
-    radarChart.options.scales.r.angleLines.color = gridC;
-    radarChart.options.scales.r.grid.color = gridC;
-    radarChart.options.scales.r.pointLabels.color = tickC;
-    radarChart.update();
-
     stackChart.options.scales.x.ticks.color = tickC;
     stackChart.options.scales.y.grid.color = gridC;
     stackChart.options.scales.y.ticks.color = tickC;
     stackChart.update();
   };
-});
+
+  // Neural Network Visualization — Interactive, hover nodes to see skills
+  const nnWrap = document.getElementById('nnViz');
+  const nnCanvas = document.createElement('canvas');
+  nnWrap.appendChild(nnCanvas);
+  const nnCtx = nnCanvas.getContext('2d');
+
+  // Tooltip overlay element
+  const nnTooltip = document.createElement('div');
+  nnTooltip.id = 'nn-tooltip';
+  nnTooltip.style.cssText = `
+    position:absolute; pointer-events:none; z-index:50;
+    background:rgba(6,8,15,0.92); border:1px solid var(--border-strong);
+    border-radius:10px; padding:10px 16px; font-family:var(--mono);
+    font-size:11px; color:var(--text-main); backdrop-filter:blur(12px);
+    box-shadow:0 8px 30px rgba(0,0,0,0.5),0 0 20px rgba(0,255,157,0.15);
+    transition:opacity 0.2s; opacity:0; max-width:180px; line-height:1.6;
+    white-space:nowrap;
+  `;
+  nnWrap.style.position = 'relative';
+  nnWrap.appendChild(nnTooltip);
+
+  function resizeNN() {
+    nnCanvas.width = nnWrap.offsetWidth;
+    nnCanvas.height = nnWrap.offsetHeight;
+  }
+  resizeNN();
+  window.addEventListener('resize', resizeNN);
+
+  // Each node carries a skill label and category color
+  const layers = [
+    { name: 'Input', color: '#00e5ff', nodes: [
+      { label: 'Python',       desc: 'Core language · Data · AI' },
+      { label: 'SQL',          desc: 'Queries · Databases' },
+      { label: 'R',            desc: 'Stats · Modelling' },
+      { label: 'Java / C',     desc: 'Systems · Arduino' },
+    ]},
+    { name: 'Hidden 1', color: '#7c4dff', nodes: [
+      { label: 'Pandas',       desc: 'Data wrangling' },
+      { label: 'NumPy',        desc: 'Numerical computing' },
+      { label: 'Matplotlib',   desc: 'Data visualization' },
+      { label: 'Streamlit',    desc: 'ML app deployment' },
+      { label: 'Jupyter',      desc: 'Notebooks · EDA' },
+    ]},
+    { name: 'Hidden 2', color: '#7c4dff', nodes: [
+      { label: 'scikit-learn', desc: 'ML pipelines' },
+      { label: 'OpenCV',       desc: 'Computer vision' },
+      { label: 'MediaPipe',    desc: 'Pose · Face · Hands' },
+      { label: 'NLP',          desc: 'Text · Language AI' },
+      { label: 'LLMs / Qwen',  desc: 'Offline AI research' },
+    ]},
+    { name: 'Hidden 3', color: '#2979ff', nodes: [
+      { label: 'Hadoop',       desc: 'Distributed computing' },
+      { label: 'Kafka',        desc: 'Real-time streaming' },
+      { label: 'MongoDB',      desc: 'NoSQL · Documents' },
+      { label: 'Linux / CLI',  desc: 'Unix shell · Systems' },
+    ]},
+    { name: 'Output', color: '#00ff9d', nodes: [
+      { label: 'Data Insight', desc: 'Analysis to Decisions' },
+      { label: 'AI Model',     desc: 'Trained · Deployed' },
+      { label: 'IoT System',   desc: 'Hardware to Cloud' },
+    ]},
+  ];
+
+  const nodeRadius = 9;
+  let pulseT = 0;
+  let activations = [];
+  let hoveredNode = null; // { li, ni }
+
+  function spawnActivation() {
+    activations.push({ layer: 0, node: Math.floor(Math.random() * layers[0].nodes.length), progress: 0 });
+  }
+  setInterval(spawnActivation, 800);
+  spawnActivation();
+
+  // Pre-calc node positions (recalculated each frame for resize safety)
+  function getNodePositions() {
+    const W = nnCanvas.width, H = nnCanvas.height;
+    const lCount = layers.length;
+    const lSpacing = W / (lCount + 1);
+    return layers.map((layer, li) => {
+      const x = lSpacing * (li + 1);
+      const nCount = layer.nodes.length;
+      return layer.nodes.map((_, ni) => ({
+        x,
+        y: H / 2 + (ni - (nCount - 1) / 2) * Math.min(38, (H - 40) / Math.max(nCount, 1))
+      }));
+    });
+  }
+
+  function drawNN() {
+    const W = nnCanvas.width, H = nnCanvas.height;
+    nnCtx.clearRect(0, 0, W, H);
+    const isL = root.getAttribute('data-theme') === 'light';
+    const lCount = layers.length;
+    const nodePos = getNodePositions();
+    const lSpacing = W / (lCount + 1);
+
+    // Draw connections
+    for (let li = 0; li < lCount - 1; li++) {
+      nodePos[li].forEach((from, fi) => {
+        nodePos[li + 1].forEach((to, ti) => {
+          const isHovFrom = hoveredNode && hoveredNode.li === li && hoveredNode.ni === fi;
+          const isHovTo   = hoveredNode && hoveredNode.li === li + 1 && hoveredNode.ni === ti;
+          nnCtx.beginPath();
+          nnCtx.moveTo(from.x, from.y);
+          nnCtx.lineTo(to.x, to.y);
+          if (isHovFrom || isHovTo) {
+            nnCtx.strokeStyle = layers[li].color + '88';
+            nnCtx.lineWidth = 1.5;
+          } else {
+            nnCtx.strokeStyle = isL ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)';
+            nnCtx.lineWidth = 0.7;
+          }
+          nnCtx.stroke();
+        });
+      });
+    }
+
+    // Draw activations
+    activations = activations.filter(a => {
+      if (a.layer >= lCount - 1) return false;
+      a.progress += 0.022;
+      if (a.progress >= 1) {
+        a.layer++;
+        a.progress = 0;
+        if (a.layer < lCount - 1) a.node = Math.floor(Math.random() * layers[a.layer + 1].nodes.length);
+        if (a.layer >= lCount - 1) return false;
+      }
+      const from = nodePos[a.layer][a.node % nodePos[a.layer].length];
+      const nextNode = a.node % nodePos[a.layer + 1].length;
+      const to = nodePos[a.layer + 1][nextNode];
+      const px = from.x + (to.x - from.x) * a.progress;
+      const py = from.y + (to.y - from.y) * a.progress;
+      nnCtx.beginPath();
+      nnCtx.arc(px, py, 3, 0, Math.PI * 2);
+      nnCtx.fillStyle = layers[a.layer].color;
+      nnCtx.shadowBlur = 10;
+      nnCtx.shadowColor = layers[a.layer].color;
+      nnCtx.fill();
+      nnCtx.shadowBlur = 0;
+      nnCtx.beginPath();
+      nnCtx.moveTo(from.x, from.y);
+      nnCtx.lineTo(px, py);
+      nnCtx.strokeStyle = layers[a.layer].color + '35';
+      nnCtx.lineWidth = 1.2;
+      nnCtx.stroke();
+      return true;
+    });
+
+    // Draw nodes
+    pulseT += 0.035;
+    layers.forEach((layer, li) => {
+      nodePos[li].forEach((pos, ni) => {
+        const isHov = hoveredNode && hoveredNode.li === li && hoveredNode.ni === ni;
+        const pulse = isHov ? 1.4 : 1 + Math.sin(pulseT + li * 1.2 + ni * 0.8) * 0.07;
+        const r = nodeRadius * pulse;
+
+        // Glow halo
+        const grad = nnCtx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, r * (isHov ? 4 : 2.5));
+        grad.addColorStop(0, layer.color + (isHov ? '55' : '28'));
+        grad.addColorStop(1, 'transparent');
+        nnCtx.beginPath();
+        nnCtx.arc(pos.x, pos.y, r * (isHov ? 4 : 2.5), 0, Math.PI * 2);
+        nnCtx.fillStyle = grad;
+        nnCtx.fill();
+
+        // Node circle
+        nnCtx.beginPath();
+        nnCtx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
+        nnCtx.fillStyle = isHov ? layer.color : (isL ? '#fff' : '#0a0d1a');
+        nnCtx.fill();
+        nnCtx.strokeStyle = layer.color;
+        nnCtx.lineWidth = isHov ? 2.5 : 1.8;
+        nnCtx.shadowBlur = isHov ? 16 : 8;
+        nnCtx.shadowColor = layer.color;
+        nnCtx.stroke();
+        nnCtx.shadowBlur = 0;
+
+        // Dot indicator on hover (no emoji)
+        if (isHov) {
+          nnCtx.beginPath();
+          nnCtx.arc(pos.x, pos.y, 3, 0, Math.PI * 2);
+          nnCtx.fillStyle = isL ? '#000' : '#000';
+          nnCtx.fill();
+        }
+      });
+
+      // Layer name at bottom
+      const lx = lSpacing * (li + 1);
+      nnCtx.font = '8px "JetBrains Mono", monospace';
+      nnCtx.fillStyle = layer.color + 'aa';
+      nnCtx.textAlign = 'center';
+      nnCtx.fillText(layer.name, lx, H - 4);
+    });
+
+    requestAnimationFrame(drawNN);
+  }
+  drawNN();
+
+  // Mouse interaction — detect hovered node, show tooltip
+  nnCanvas.addEventListener('mousemove', e => {
+    const rect = nnCanvas.getBoundingClientRect();
+    const mx = (e.clientX - rect.left) * (nnCanvas.width / rect.width);
+    const my = (e.clientY - rect.top) * (nnCanvas.height / rect.height);
+    const nodePos = getNodePositions();
+    let found = null;
+
+    outerLoop:
+    for (let li = 0; li < layers.length; li++) {
+      for (let ni = 0; ni < nodePos[li].length; ni++) {
+        const p = nodePos[li][ni];
+        const dx = mx - p.x, dy = my - p.y;
+        if (Math.sqrt(dx*dx + dy*dy) <= nodeRadius * 2) {
+          found = { li, ni };
+          break outerLoop;
+        }
+      }
+    }
+
+    hoveredNode = found;
+    if (found) {
+      const node = layers[found.li].nodes[found.ni];
+      const color = layers[found.li].color;
+      nnTooltip.innerHTML = `
+        <div style="color:${color};font-size:12px;font-weight:700;letter-spacing:0.05em;margin-bottom:5px">${node.label}</div>
+        <div style="color:var(--text-dim);font-size:10px;letter-spacing:0.03em">${node.desc}</div>
+      `;
+      // Position tooltip
+      const px = nodePos[found.li][found.ni].x / nnCanvas.width * nnWrap.offsetWidth;
+      const py = nodePos[found.li][found.ni].y / nnCanvas.height * nnWrap.offsetHeight;
+      const tipX = Math.min(px + 16, nnWrap.offsetWidth - 195);
+      const tipY = Math.max(py - 38, 4);
+      nnTooltip.style.left = tipX + 'px';
+      nnTooltip.style.top = tipY + 'px';
+      nnTooltip.style.opacity = '1';
+      nnCanvas.style.cursor = 'crosshair';
+    } else {
+      nnTooltip.style.opacity = '0';
+      nnCanvas.style.cursor = 'default';
+    }
+  });
+
+  nnCanvas.addEventListener('mouseleave', () => {
+    hoveredNode = null;
+    nnTooltip.style.opacity = '0';
+  });
+}); // end window.addEventListener('load')
 
 // Scroll Reveals
 const rvEls = document.querySelectorAll('.rv');
