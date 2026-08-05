@@ -86,9 +86,7 @@ What I care about most is the gap between raw data and a decision someone can ac
 ## Profile Summary
 
 <div align="center">
-
-<img src="https://raw.githubusercontent.com/eshwarg14/eshwarg14/main/profile-summary-card-output/nord_dark/0-profile-details.svg" width="90%" />
-
+  <img src="https://github-readme-stats.vercel.app/api?username=eshwarg14&theme=nord&show_icons=true" width="80%" />
 </div>
 
 ---
