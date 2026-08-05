@@ -87,7 +87,7 @@ What I care about most is the gap between raw data and a decision someone can ac
 
 <div align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=eshwarg14&theme=nord_dark" width="90%" />
+<img src="https://raw.githubusercontent.com/eshwarg14/eshwarg14/main/profile-summary-card-output/nord_dark/0-profile-details.svg" width="90%" />
 
 </div>
 
