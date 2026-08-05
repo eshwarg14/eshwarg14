@@ -87,7 +87,7 @@ What I care about most is the gap between raw data and a decision someone can ac
 
 <div align="center">
   <a href="https://github.com/eshwarg14">
-    <img src="https://github-readme-stats.vercel.app/api?username=eshwarg14&show_icons=true&theme=nord&hide_border=true&count_private=true" width="48%" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=eshwarg14&theme=nord&hide_border=true" width="48%" />
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eshwarg14&layout=compact&theme=nord&hide_border=true&langs_count=6" width="48%" />
   </a>
 </div>
